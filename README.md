@@ -1,4 +1,4 @@
-# beyonder
+# Beyonder
 an All-in-One Browser &amp; Profile Management App.
 
 # License
