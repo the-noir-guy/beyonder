@@ -35,7 +35,7 @@ Grab the latest build from the [**Releases page**](../../releases/latest).
 | File | What it is |
 |---|---|
 | [`Beyonder-Windows.zip`](../../releases/latest/download/Beyonder-Windows.zip) | Ready-to-run app. Unzip it and run `Beyonder.exe`. No Python needed. |
-| [`Beyonder-Source.zip`](../../releases/latest/download/Beyonder-Source.zip) | The source code, to run with Python or build yourself. |
+| [`Source-code.zip`](../../archive/refs/tags/v1.0.0.zip) | The source code, to run with Python or build yourself. |
  
 > [!NOTE]
 > The `.exe` is not code-signed, so Windows SmartScreen may show a warning the first time. Choose **More info**, then **Run anyway**.
