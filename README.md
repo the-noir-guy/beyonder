@@ -1,7 +1,7 @@
 # beyonder
 an All-in-One Browser &amp; Profile Management App.
 
-## License
+# License
 
 This project is licensed under the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0).
 
