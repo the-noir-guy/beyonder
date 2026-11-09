@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Beyonder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pre intro">
+
+<header id="titlebar">
+  <div class="tb-left">
+    <img id="tb-logo" src="../assets/favicon.ico" alt="" width="20" height="20" draggable="false">
+    <span class="tb-name">Beyonder</span>
+    <span class="hz tb-hz"></span>
+  </div>
+  <div class="tb-right">
+    <div class="tbw rbh"><button id="btn-settings" class="tbb" type="button" aria-label="Settings">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+    </button></div>
+    <div class="tbw rbh"><button id="btn-min" class="tbb" type="button" aria-label="Minimize">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 9h8"/></svg>
+    </button></div>
+    <div class="tbw rbh"><button id="btn-max" class="tbb" type="button" aria-label="Maximize">
+      <svg class="i-max" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="8" height="8"/></svg>
+      <svg class="i-restore" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4V1.8h6.2V8H8"/><rect x="1.8" y="4" width="6.2" height="6.2"/></svg>
+    </button></div>
+    <div class="tbw rbh"><button id="btn-close" class="tbb" type="button" aria-label="Close">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 2l8 8M10 2l-8 8"/></svg>
+    </button></div>
+  </div>
+</header>
+
+<main id="viewport">
+  <div id="stage">
+
+    <div id="main-ui">
+      <div class="a dots"></div>
+      <div class="a scan"></div>
+      <svg id="hudframe" class="a frame" fill="none" stroke="currentColor" aria-hidden="true"></svg>
+
+      <div class="mono a w" style="right:95px;top:47px"><span class="dot rb"></span>SYS.ONLINE</div>
+      <div class="mono a w" style="left:calc(50% - 150px);width:300px;top:30px;text-align:center">_BYD.01 // Profile launcher</div>
+      <div class="mono a" style="left:95px;top:46px">WIN64 // BUILD 1.0</div>
+
+      <div class="sl rb" style="left:60px;top:150px;transform:rotate(-40deg)"></div>
+      <div class="sl rb" style="left:76px;top:170px;transform:rotate(-40deg)"></div>
+      <div class="sl rb" style="left:92px;top:190px;transform:rotate(-40deg)"></div>
+      <div class="sl rb" style="right:60px;top:150px;transform:rotate(40deg)"></div>
+      <div class="sl rb" style="right:76px;top:170px;transform:rotate(40deg)"></div>
+      <div class="sl rb" style="right:92px;top:190px;transform:rotate(40deg)"></div>
+
+      <h1 id="wordmark" class="a">BEYONDER</h1>
+
+      <div id="browsers" role="tablist" aria-label="Browsers"></div>
+
+      <section id="panel" aria-label="Profiles">
+        <div id="panel-in">
+          <div class="hz a" style="left:24px;top:16px;width:90px;height:10px"></div>
+          <div id="panel-title" class="mono a w" style="left:134px;top:12px"></div>
+          <div class="mono a" style="right:50px;top:11px">[ Right-click: remove ]</div>
+          <div id="views"></div>
+          <div id="sbar" aria-hidden="true"><div id="sthumb"></div></div>
+          <div id="fxlines" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <div id="stats">
+        <div class="stat"><div class="mono">Browsers</div><div id="st-browsers" class="num">00</div></div>
+        <div class="stat"><div class="mono">Profiles</div><div id="st-profiles" class="num">00</div></div>
+        <div class="stat"><div class="mono">Launches</div><div id="st-launches" class="num">00</div></div>
+        <button id="add-profile" type="button">Add Profiles</button>
+      </div>
+
+      <div class="cmb a" style="left:calc(50% - 150px);bottom:42px;width:300px;height:14px;border-bottom:1px solid var(--ink)"></div>
+      <div class="bar a" style="left:130px;bottom:42px;width:120px;height:16px"></div>
+      <div class="bar a" style="right:130px;bottom:42px;width:120px;height:16px"></div>
+      <div class="mono a" style="left:277px;bottom:42px">Serial // 0158-0050-0199</div>
+      <div class="mono a" style="right:327px;bottom:42px">32.59N / 18.00E</div>
+    </div>
+
+    <div id="menu-layer"></div>
+    <div id="toast-layer"></div>
+    <div id="modal-layer"></div>
+  </div>
+</main>
+
+<div id="resize-handles">
+  <div class="rh" data-edge="t" style="left:12px;right:12px;top:0;height:5px;cursor:ns-resize"></div>
+  <div class="rh" data-edge="b" style="left:12px;right:12px;bottom:0;height:5px;cursor:ns-resize"></div>
+  <div class="rh" data-edge="l" style="top:12px;bottom:12px;left:0;width:5px;cursor:ew-resize"></div>
+  <div class="rh" data-edge="r" style="top:12px;bottom:12px;right:0;width:5px;cursor:ew-resize"></div>
+  <div class="rh" data-edge="tl" style="left:0;top:0;width:12px;height:12px;cursor:nwse-resize"></div>
+  <div class="rh" data-edge="tr" style="right:0;top:0;width:12px;height:12px;cursor:nesw-resize"></div>
+  <div class="rh" data-edge="bl" style="left:0;bottom:0;width:12px;height:12px;cursor:nesw-resize"></div>
+  <div class="rh" data-edge="br" style="right:0;bottom:0;width:12px;height:12px;cursor:nwse-resize"></div>
+</div>
+
+<div id="fx" aria-hidden="true"><div id="scanline"></div><div id="bars"></div></div>
+
+<aside id="errpanel" hidden role="alert">
+  <div class="ep-bw"><div class="ep-in">
+    <div class="ep-head"><span>[ ERROR ]</span><span class="hz"></span></div>
+    <pre id="err-text"></pre>
+    <div class="ep-foot"><span>LOG: data/error.log</span><button id="err-close" type="button">Close</button></div>
+  </div></div>
+</aside>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="fxView" x="-6%" y="-2%" width="112%" height="104%" color-interpolation-filters="sRGB">
+    <feTurbulence class="turb" type="fractalNoise" baseFrequency="0.0008 0.06" numOctaves="1" seed="1" result="n0"/>
+    <feColorMatrix in="n0" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0 1" result="n1"/>
+    <feComponentTransfer in="n1" result="steps">
+      <feFuncR type="discrete" tableValues="0.5 0.5 0.5 0 1 0.3 0.9 0.5 0.5 0.5"/>
+      <feFuncG type="discrete" tableValues="0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5"/>
+    </feComponentTransfer>
+    <feDisplacementMap class="disp" in="SourceGraphic" in2="steps" scale="0" xChannelSelector="R" yChannelSelector="G" result="shift"/>
+    <feColorMatrix in="shift" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
+    <feColorMatrix in="shift" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" result="gb"/>
+    <feOffset class="offR" in="r" dx="0" dy="0" result="rO"/>
+    <feOffset class="offGB" in="gb" dx="0" dy="0" result="gbO"/>
+    <feBlend in="rO" in2="gbO" mode="screen"/>
+  </filter>
+  <filter id="fxTile" x="-40%" y="-10%" width="180%" height="120%" color-interpolation-filters="sRGB">
+    <feTurbulence class="turb" type="fractalNoise" baseFrequency="0.0008 0.09" numOctaves="1" seed="1" result="n0"/>
+    <feColorMatrix in="n0" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0 1" result="n1"/>
+    <feComponentTransfer in="n1" result="steps">
+      <feFuncR type="discrete" tableValues="0.5 0.5 0.5 0 1 0.3 0.9 0.5 0.5 0.5"/>
+      <feFuncG type="discrete" tableValues="0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5"/>
+    </feComponentTransfer>
+    <feDisplacementMap class="disp" in="SourceGraphic" in2="steps" scale="0" xChannelSelector="R" yChannelSelector="G" result="shift"/>
+    <feColorMatrix in="shift" type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" result="r"/>
+    <feColorMatrix in="shift" type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" result="gb"/>
+    <feOffset class="offR" in="r" dx="0" dy="0" result="rO"/>
+    <feOffset class="offGB" in="gb" dx="0" dy="0" result="gbO"/>
+    <feBlend in="rO" in2="gbO" mode="screen"/>
+  </filter>
+</svg>
+
+<script src="js/bridge.js"></script>
+<script src="js/stage.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dialogs.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
